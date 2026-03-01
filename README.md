@@ -100,7 +100,7 @@ her format belirtecinin davranışı izole edilmiştir.
 - Bu fonksiyon, % karakterinden sonra gelen format
 belirtecini kontrol eder ve ilgili conversion fonksiyonunu
 çağırır.
--Bu yapı, ft_printf fonksiyonunun sade kalmasını sağlar
+- Bu yapı, ft_printf fonksiyonunun sade kalmasını sağlar
 ve conversion mantığını merkezileştirir.
 
 ### 3. Conversion Fonksiyonları
