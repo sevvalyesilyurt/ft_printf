@@ -30,7 +30,6 @@ yoğunlaşılmıştır.
 - Modüler, okunabilir ve sürdürülebilir C kodu yazmak,
 - Recursive ve iterative yaklaşımları dönüşüm fonksiyonlarında uygulamak,
 - Yazdırılan karakter sayısını doğru şekilde yönetmek,
-- 42 Norm kurallarına uygun yazılım geliştirmek.
 
 ---
 
@@ -89,7 +88,7 @@ her format belirtecinin davranışı izole edilmiştir.
 
 ### 1. Ana Fonksiyon
 
-ft_printf
+`ft_printf`
 - Format string’i karakter karakter okur
 - % karakteriyle karşılaşıldığında conversion sürecini başlatır
 - Normal karakterleri doğrudan ekrana yazdırır
@@ -97,7 +96,7 @@ ft_printf
 
 ### 2. Format Yönlendirme (Dispatcher)
 
-ft_which_character
+`ft_which_character`
 - Bu fonksiyon, % karakterinden sonra gelen format
 belirtecini kontrol eder ve ilgili conversion fonksiyonunu
 çağırır.
@@ -115,19 +114,19 @@ fonksiyonları:
 
 #### 3.1 Karakter ve String Conversion’ları
 
-ft_print_char
+`ft_print_char`
 - %c formatı için tek bir karakter yazdırır.
 
-ft_print_str
+`ft_print_str`
 - %s formatı için null-terminated string yazdırır.
 - NULL kontrolü yapılarak güvenli yazdırma sağlanır.
 
 #### 3.2 Sayısal Conversion’lar
 
-ft_print_nbr
+`ft_print_nbr`
 - %d ve %i formatları için signed integer yazdırır.
 
-ft_print_unsigned
+`ft_print_unsigned`
 - %u formatı için unsigned integer yazdırır.
 
 Bu fonksiyonlarda sayılar recursive veya iterative
@@ -135,14 +134,14 @@ yaklaşımlar kullanılarak basamak basamak yazdırılır.
 
 #### 3.3 Hexadecimal Conversion’lar
 
-ft_print_hex
+`ft_print_hex`
 - %x ve %X formatları için hexadecimal yazdırma yapar.
 Küçük veya büyük harf kullanımı format belirtecine göre
 belirlenir.
 
 #### 3.4 Pointer Conversion
 
-ft_print_ptr
+`ft_print_ptr`
 - %p formatı için pointer adresini 0x önekiyle birlikte
 hexadecimal formatta yazdırır.
 
