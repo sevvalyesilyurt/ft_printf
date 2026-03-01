@@ -142,7 +142,7 @@ belirlenir.
 #### 3.4 Pointer Conversion
 
 `ft_print_ptr`
-- %p formatı için pointer adresini 0x önekiyle birlikte
+- %p formatı için pointer adresini 0x ön ekiyle birlikte
 hexadecimal formatta yazdırır.
 
 Pointer yazdırımı sırasında, mimariden bağımsız ve güvenli
