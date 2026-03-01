@@ -40,23 +40,23 @@ yoğunlaşılmıştır.
 
 ```bash
 make
-
+```
 - Oluşturulan obje dosyalarını silmek için:
 
 ```bash
 make clean
-
+```
 - Arşiv ve obje dosyalarını silmek için:
 
 ```bash
 make fclean
-
+```
 - Kütüphaneyi temizleyip yeniden derlemek için:
 
 ```bash
 make re
-
--Derleme sonucunda libftprintf.a adlı statik kütüphane
+```
+- Derleme sonucunda libftprintf.a adlı statik kütüphane
 oluşturulur.
 
 ## Kullanım 
@@ -68,12 +68,13 @@ ft_printf.h dosyasını projenize dahil etmeniz yeterlidir.
 
 ```bash
 cc main.c -L. -lftprintf
+```
 
 - Örnek kullanım:
 
 ```bash
 ft_printf("Sayi: %d, Yazi: %s, Adres: %p\n", 42, "merhaba", &x);
-
+```
 
 ## Kütüphanenin Detaylı Anlatımı 
 
@@ -86,7 +87,7 @@ Bu yapı sayesinde kod okunabilirliği artırılmış ve
 her format belirtecinin davranışı izole edilmiştir.
 
 
-1. Ana Fonksiyon
+### 1. Ana Fonksiyon
 
 ft_printf
 - Format string’i karakter karakter okur
@@ -94,7 +95,7 @@ ft_printf
 - Normal karakterleri doğrudan ekrana yazdırır
 - Yazdırılan toplam karakter sayısını döndürür
 
-2. Format Yönlendirme (Dispatcher)
+### 2. Format Yönlendirme (Dispatcher)
 
 ft_which_character
 - Bu fonksiyon, % karakterinden sonra gelen format
@@ -103,7 +104,7 @@ belirtecini kontrol eder ve ilgili conversion fonksiyonunu
 -Bu yapı, ft_printf fonksiyonunun sade kalmasını sağlar
 ve conversion mantığını merkezileştirir.
 
-3. Conversion Fonksiyonları
+### 3. Conversion Fonksiyonları
 
 Bu bölümde, her format belirteci için yazılmış olan
 dönüşüm fonksiyonları yer almaktadır. Tüm conversion
@@ -112,7 +113,7 @@ fonksiyonları:
 - Ekrana yazdırma işlemini gerçekleştirir
 - Yazdırılan karakter sayısını int olarak döndürür
 
-3.1 Karakter ve String Conversion’ları
+#### 3.1 Karakter ve String Conversion’ları
 
 ft_print_char
 - %c formatı için tek bir karakter yazdırır.
@@ -121,7 +122,7 @@ ft_print_str
 - %s formatı için null-terminated string yazdırır.
 - NULL kontrolü yapılarak güvenli yazdırma sağlanır.
 
-3.2 Sayısal Conversion’lar
+#### 3.2 Sayısal Conversion’lar
 
 ft_print_nbr
 - %d ve %i formatları için signed integer yazdırır.
@@ -132,14 +133,14 @@ ft_print_unsigned
 Bu fonksiyonlarda sayılar recursive veya iterative
 yaklaşımlar kullanılarak basamak basamak yazdırılır.
 
-3.3 Hexadecimal Conversion’lar
+#### 3.3 Hexadecimal Conversion’lar
 
 ft_print_hex
 - %x ve %X formatları için hexadecimal yazdırma yapar.
 Küçük veya büyük harf kullanımı format belirtecine göre
 belirlenir.
 
-3.4 Pointer Conversion
+#### 3.4 Pointer Conversion
 
 ft_print_ptr
 - %p formatı için pointer adresini 0x önekiyle birlikte
