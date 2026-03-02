@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 00:59:07 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/02/28 02:31:40 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/02 04:21:15 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	ft_print_ptr(void *ptr)
 	address = (unsigned long)ptr;
 	if (ptr == NULL)
 	{
-		write(1, "0x0", 3);
-		return (3);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	i = 2;
 	write(1, "0x", 2);

@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 16:24:22 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/01 23:40:47 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/02 04:10:19 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static int	ft_which_character(char c, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	int count;
-	int i;
+	va_list	args;
+	int		count;
+	int		i;
 
 	i = 0;
 	count = 0;
