@@ -6,13 +6,13 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 00:59:07 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/02 04:21:15 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/02 04:49:29 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_ptr_to_hex(unsigned long n)
+static int	ft_ptr_to_hex(unsigned long n)
 {
 	int		i;
 	char	*base;
