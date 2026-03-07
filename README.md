@@ -103,7 +103,7 @@ belirtecini kontrol eder ve ilgili conversion fonksiyonunu
 - Bu yapı, ft_printf fonksiyonunun sade kalmasını sağlar
 ve conversion mantığını merkezileştirir.
 
-### 3. Conversion Fonksiyonları
+### 3. Dönüşüm Fonksiyonları (Conversion)
 
 Bu bölümde, her format belirteci için yazılmış olan
 dönüşüm fonksiyonları yer almaktadır. Tüm conversion
@@ -112,7 +112,7 @@ fonksiyonları:
 - Ekrana yazdırma işlemini gerçekleştirir
 - Yazdırılan karakter sayısını int olarak döndürür
 
-#### 3.1 Karakter ve String Conversion’ları
+#### 3.1 Karakter ve String Dönüşüm Fonksiyonları
 
 `ft_print_char`
 - %c formatı için tek bir karakter yazdırır.
@@ -121,7 +121,7 @@ fonksiyonları:
 - %s formatı için null-terminated string yazdırır.
 - NULL kontrolü yapılarak güvenli yazdırma sağlanır.
 
-#### 3.2 Sayısal Conversion’lar
+#### 3.2 Sayısal Dönüşüm Fonksiyonları
 
 `ft_print_nbr`
 - %d ve %i formatları için signed integer yazdırır.
@@ -132,14 +132,14 @@ fonksiyonları:
 Bu fonksiyonlarda sayılar recursive veya iterative
 yaklaşımlar kullanılarak basamak basamak yazdırılır.
 
-#### 3.3 Hexadecimal Conversion’lar
+#### 3.3 Hexadecimal Dönüşüm Fonksiyonları
 
 `ft_print_hex`
 - %x ve %X formatları için hexadecimal yazdırma yapar.
 Küçük veya büyük harf kullanımı format belirtecine göre
 belirlenir.
 
-#### 3.4 Pointer Conversion
+#### 3.4 Pointer Dönüşüm Fonksiyonları
 
 `ft_print_ptr`
 - %p formatı için pointer adresini 0x ön ekiyle birlikte
