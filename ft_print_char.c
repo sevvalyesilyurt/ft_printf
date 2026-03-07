@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 16:26:40 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/03 21:13:13 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:47:00 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ int	ft_print_char(int c)
 {
 	if (write(1, &c, 1) == -1)
 		return (-1);
-	write(1, &c, 1);
 	return (1);
 }

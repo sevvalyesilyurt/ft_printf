@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 20:57:13 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/03 21:16:04 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:09:58 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_print_hex(unsigned int n, char type)
 	base_lower = "0123456789abcdef";
 	if (n >= 16)
 	{
-		i += ft_print_hex(n / 16, type);
+		i = ft_print_hex(n / 16, type);
 		if (i == -1)
 			return (-1);
 	}

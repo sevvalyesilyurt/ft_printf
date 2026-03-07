@@ -6,7 +6,7 @@
 /*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 00:59:07 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/02 04:49:29 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/05 20:12:10 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,48 @@
 
 static int	ft_ptr_to_hex(unsigned long n)
 {
-	int		i;
+	int		count;
+	int		temp;
 	char	*base;
 	char	c;
 
 	base = "0123456789abcdef";
-	i = 0;
+	temp = 0;
+	count = 0;
 	if (n >= 16)
 	{
-		i += ft_ptr_to_hex(n / 16);
+		temp = ft_ptr_to_hex(n / 16);
+		if (temp == -1)
+			return (-1);
+		count = count + temp;
 	}
 	c = base[n % 16];
-	write(1, &c, 1);
-	i++;
-	return (i);
+	if (write(1, &c, 1) == -1)
+		return (-1);
+	count++;
+	return (count);
 }
 
 int	ft_print_ptr(void *ptr)
 {
 	unsigned long	address;
 	int				i;
+	int				temp;
 
+	temp = 0;
 	address = (unsigned long)ptr;
 	if (ptr == NULL)
 	{
-		write(1, "(nil)", 5);
+		if (write(1, "(nil)", 5) == -1)
+			return (-1);
 		return (5);
 	}
+	if (write(1, "0x", 2) == -1)
+		return (-1);
 	i = 2;
-	write(1, "0x", 2);
-	i += ft_ptr_to_hex(address);
+	temp = ft_ptr_to_hex(address);
+	if (temp == -1)
+		return (-1);
+	i = temp;
 	return (i);
 }
