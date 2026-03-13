@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sevyesil <sevyesil@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 02:35:51 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/05 20:17:20 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/07 19:52:12 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

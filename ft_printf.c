@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sevyesil <sevyesil@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 16:24:22 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/07 16:14:06 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/13 18:52:27 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,10 @@ int	ft_printf(const char *format, ...)
 		}
 		else if (*format == '%' && *(format + 1) == 0)
 			return (-1);
+		else if (write(1, format, 1) == -1)
+			return (-1);
 		else
-		{
-			write(1, &*format, 1);
 			count++;
-		}
 		format++;
 	}
 	va_end(args);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sevyesil <sevyesil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sevyesil <sevyesil@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/28 00:59:07 by sevyesil          #+#    #+#             */
-/*   Updated: 2026/03/05 20:12:10 by sevyesil         ###   ########.fr       */
+/*   Updated: 2026/03/09 17:15:44 by sevyesil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ int	ft_print_ptr(void *ptr)
 	temp = ft_ptr_to_hex(address);
 	if (temp == -1)
 		return (-1);
-	i = temp;
+	i = temp + i;
 	return (i);
 }
